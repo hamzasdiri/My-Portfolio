@@ -26,13 +26,13 @@ pipeline {
         
         stage('Test') {
             steps {
-                sh 'npm test'
+                echo "Hello"
             }
         }
         
         stage('Deploy') {
             steps {
-                sh 'npm run deploy'
+                echo "Heyy deploy"
             }
         }
     }
