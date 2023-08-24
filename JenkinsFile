@@ -3,7 +3,7 @@ pipeline {
         label 'jenkins-agent'
     }
     tools {
-        NodeJS "node"
+        NodeJS 'node'
     }
 
     stages {
