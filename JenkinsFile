@@ -9,44 +9,40 @@ pipeline {
     stages {
         stage('Cleanup Workspace') {
             steps {
-                cleanWs()
+                echo "heyy 1"
             }
         }
 
         stage('Checkout') {
             steps {
                 // Clone the repository using the provided credentials
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/master']], // Replace 'master' with your desired branch
-                    userRemoteConfigs: [[url: 'https://github.com/hamzasdiri/My-Portfolio']]
-                ])
+                echo "heyy 2"
             }
         }
         
         stage('Install Dependencies') {
             steps {
                 // Use the NodeJS installation to install dependencies
-                sh "${NODE_HOME}/bin/npm install"
+                echo "heyy 3"
             }
         }
         
         stage('Build') {
             steps {
                 // Use the NodeJS installation to build your project
-                sh "${NODE_HOME}/bin/npm run build"
+                echo "heyy 4"
             }
         }
         
         stage('Test') {
             steps {
-                echo "Hello"
+                echo "heyy 5"
             }
         }
         
         stage('Deploy') {
             steps {
-                echo "Heyy deploy"
+                echo "heyy 6"
             }
         }
     }
