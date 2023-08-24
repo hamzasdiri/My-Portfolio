@@ -19,7 +19,7 @@ const Certificat = () => {
           return(
             <article className='certificat_item'>
             <div className='certificat_item-image'>
-                <a href='https://freecodecamp.org/certification/hvmzv/front-end-development-libraries' target='_blank'>
+                <a href='https://freecodecamp.org/certification/hvmzv/front-end-development-libraries' target='_blank' rel='noreferrer'>
             <img src={image} alt={id}/>
             </a>
               </div>

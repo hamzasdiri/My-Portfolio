@@ -11,7 +11,6 @@ import { useState } from 'react';
 const Nav = () => {
 
   const [activeState,setActive]=useState("#");
-const li=document.querySelectorAll(".links");
 const sec=document.querySelector("section");
 
 function activeMenu(){

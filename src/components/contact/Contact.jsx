@@ -38,12 +38,12 @@ const Contact = () => {
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
-            <a href="mailto:sdirihamza241@gmail.com" target="_blank">
+            <a href="mailto:sdirihamza241@gmail.com" target="_blank" rel='noreferrer'>
               <div>
                 <HiOutlineMail className="contact_option-icon" />
                 <h4>EMAIL</h4>
                 <h5>sdirihamza241@gmail.com</h5>
-                <a href="mailto:sdirihamza241@gmail.com" target="_blank">
+                <a href="mailto:sdirihamza241@gmail.com" target="_blank" rel='noreferrer'>
                   Send a message
                 </a>
               </div>
@@ -51,12 +51,12 @@ const Contact = () => {
           </article>
 
           <article className="contact_option">
-            <a href="https://m.me/hamza.sdiri.148" target="_blank">
+            <a href="https://m.me/hamza.sdiri.148" target="_blank" rel='noreferrer'>
               <div>
                 <RiMessengerLine className="contact_option-icon" />
                 <h4>MESSENGER</h4>
                 <h5>Hamza Sdiri</h5>
-                <a href="https://m.me/hamza.sdiri.148" target="_blank">
+                <a href="https://m.me/hamza.sdiri.148" target="_blank" rel='noreferrer'>
                   Send a message
                 </a>
               </div>
@@ -66,6 +66,7 @@ const Contact = () => {
             <a
               href="https://api.whatsapp.com/send?phone=+21627710115"
               target="_blank"
+              rel='noreferrer'
             >
               <div>
                 <BsWhatsapp className="contact_option-icon" />
@@ -74,6 +75,7 @@ const Contact = () => {
                 <a
                   href="https://api.whatsapp.com/send?phone=+21627710115"
                   target="_blank"
+                  rel='noreferrer'
                 >
                   Send a message
                 </a>
