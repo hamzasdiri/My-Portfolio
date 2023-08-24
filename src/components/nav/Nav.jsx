@@ -18,7 +18,6 @@ function activeMenu(){
   while(--len && window.scrollY+1000 < sec[len].offsetTop){}
   li.forEach(x => x.classList.remove("active"));
   li[len].classList.add("active");*/
-console.log(sec);
 }
   activeMenu();
   //window.addEventListener("scroll",activeMenu);

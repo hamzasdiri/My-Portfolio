@@ -13,10 +13,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_9l6vrus",
-        "template_uo4etir",
+        "service_zdr6y2p",
+        "template_m9gx5sh",
         form.current,
-        "7wVqo6YYZ_ny4RJzD"
+        "HRD9reWUog3LNuJnQ"
       )
       .then(
         (result) => {
@@ -38,27 +38,31 @@ const Contact = () => {
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
-            <a href="mailto:sdirihamza241@gmail.com" target="_blank" rel='noreferrer'>
+            <a
+              href="mailto:sdiri.hamza@outlook.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div>
                 <HiOutlineMail className="contact_option-icon" />
                 <h4>EMAIL</h4>
-                <h5>sdirihamza241@gmail.com</h5>
-                <a href="mailto:sdirihamza241@gmail.com" target="_blank" rel='noreferrer'>
-                  Send a message
-                </a>
+                <h5>sdiri.hamza@outlook.com</h5>
+                Send a message
               </div>
             </a>
           </article>
 
           <article className="contact_option">
-            <a href="https://m.me/hamza.sdiri.148" target="_blank" rel='noreferrer'>
+            <a
+              href="https://m.me/hamza.sdiri.148"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div>
                 <RiMessengerLine className="contact_option-icon" />
                 <h4>MESSENGER</h4>
                 <h5>Hamza Sdiri</h5>
-                <a href="https://m.me/hamza.sdiri.148" target="_blank" rel='noreferrer'>
-                  Send a message
-                </a>
+                Send a message
               </div>
             </a>
           </article>
@@ -66,19 +70,13 @@ const Contact = () => {
             <a
               href="https://api.whatsapp.com/send?phone=+21627710115"
               target="_blank"
-              rel='noreferrer'
+              rel="noreferrer"
             >
               <div>
                 <BsWhatsapp className="contact_option-icon" />
                 <h4>WHAT'SAPP</h4>
-                <h5>+216 27 710 115</h5>
-                <a
-                  href="https://api.whatsapp.com/send?phone=+21627710115"
-                  target="_blank"
-                  rel='noreferrer'
-                >
-                  Send a message
-                </a>
+                <h5>00 216 27 710 115</h5>
+                Send a message
               </div>
             </a>
           </article>

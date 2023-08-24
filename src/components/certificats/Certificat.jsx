@@ -17,7 +17,7 @@ const Certificat = () => {
       <div className='container certificat_container'>
         {data.map(({id,image,title}) => {
           return(
-            <article className='certificat_item'>
+            <article className='certificat_item' key='certif_item'>
             <div className='certificat_item-image'>
                 <a href='https://freecodecamp.org/certification/hvmzv/front-end-development-libraries' target='_blank' rel='noreferrer'>
             <img src={image} alt={id}/>
