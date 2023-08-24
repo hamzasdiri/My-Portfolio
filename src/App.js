@@ -10,7 +10,7 @@ import Services from './components/services/Services';
 
 function App() {
   return (
-    <>
+    <div data-testid="app-component">
     <Header />
     <Nav />
     <About />
@@ -22,7 +22,7 @@ function App() {
     <br />
     <br />
     <br />
-    </>
+    </div>
   );
 }
 
