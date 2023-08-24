@@ -1,9 +1,10 @@
 pipeline {
-    agent{
+    agent {
         label 'jenkins-agent'
     }
-    tools {
-        maven 'Maven3'
+    environment {
+        // You can set environment variables if needed
+        NODE_HOME = tool name: 'NodeJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     }
     stages {
         stage('Cleanup Workspace') {
@@ -14,7 +15,26 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/hamzasdiri/My-Portfolio'
+                // Clone the repository using the provided credentials
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/master']], // Replace 'master' with your desired branch
+                    userRemoteConfigs: [[url: 'https://github.com/hamzasdiri/My-Portfolio']]
+                ])
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                // Use the NodeJS installation to install dependencies
+                sh "${NODE_HOME}/bin/npm install"
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Use the NodeJS installation to build your project
+                sh "${NODE_HOME}/bin/npm run build"
             }
         }
         
