@@ -29,7 +29,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Use the NodeJS installation to install dependencies
-                sh "${NODE_HOME}/bin/npm install"
+                sh 'npm install'
                 echo "heyy 3"
             }
         }
