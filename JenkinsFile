@@ -37,7 +37,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Use the NodeJS installation to build your project
-                sh "${NODE_HOME}/bin/npm run build"
+                //sh "${NODE_HOME}/bin/npm run build"
                 echo "heyy 4"
             }
         }
