@@ -44,7 +44,7 @@ pipeline {
         stage('Sonarqube analysis') {
             steps {
                 withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token', installationName:'sonarqube-scanner') {
-                        bat "C:\sonarqube-10.1.0.73491\bin\windows-x86-64\StartSonar.bat"
+                        bat "C:/sonarqube-10.1.0.73491/bin/windows-x86-64/StartSonar.bat"
                     }
             }
         }
