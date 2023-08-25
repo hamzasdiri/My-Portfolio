@@ -45,13 +45,11 @@ pipeline {
             steps {
                 script {
             withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
-                sh "npm install -g sonarqube-scanner" // Install SonarQube scanner for Node.js
-                sh "sonar-scanner" // Run SonarQube scanner
-                 }
+                bat "sonarqube-scanner" // Run SonarQube scanner
+                }
                 }
             }
-        }   
-
+        }
         
         stage('Deploy') {
             steps {
