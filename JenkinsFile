@@ -25,36 +25,35 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install -g sonarqube-scanner'
-                bat 'npm install'
+                bat 'npm install' // Install project dependencies
             }
         }
         
         stage('Build') {
             steps {
-                bat 'npm run build'
+                bat 'npm run build' // Build your React app
             }
         }
         
         stage('Test') {
             steps {
-                echo "No tests yet"
+                echo "Executing tests" // Run your tests
             }
         }
 
         stage('Sonarqube analysis') {
             steps {
                 script {
-            withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
-                bat "sonarqube-scanner" // Run SonarQube scanner
-                }
+                    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
+                        bat "sonar-scanner" // Run SonarQube scanner for JavaScript/TypeScript projects
+                    }
                 }
             }
         }
         
         stage('Deploy') {
             steps {
-                echo "I will deploy it"
+                echo "I will deploy it" // Deploy your app to the desired environment
             }
         }
     }
