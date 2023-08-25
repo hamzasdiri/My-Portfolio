@@ -45,6 +45,7 @@ pipeline {
             steps {
                 script {
             withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
+                bat 'npm install -g sonarqube-scanner'
                 bat "sonarqube-scanner" // Run SonarQube scanner
                 }
                 }
