@@ -80,6 +80,15 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploy to Vercel') {
+            steps {
+                // Deploy to Vercel using Vercel CLI and the configured token
+                withCredentials([string(credentialsId: 'vercel-token', variable: 'VERCEL_TOKEN')]) {
+                    bat "vercel --prod --token $VERCEL_TOKEN"
+                }
+            }
+        }
         
         stage('Deploy') {
             steps {
