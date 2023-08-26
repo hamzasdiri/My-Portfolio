@@ -25,9 +25,9 @@ const Header = () => {
               <Typewriter
                 options={{
                   strings: [
-                    " Software Engineering Student",
-                    " Full-Stack Web Developer",
-                    " Mobile App Developer",
+                    "Software Engineering Student",
+                    "Full-Stack Web Developer",
+                    "Mobile App Developer",
                   ],
                   autoStart: true,
                   loop: true,
