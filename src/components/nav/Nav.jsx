@@ -22,7 +22,7 @@ function activeMenu(){
   //window.addEventListener("scroll",activeMenu);
   return (
     <nav>
-     <li className='links'><a href='#header' onClick={()=>setActive("#")} className={activeState==="#" ? 'active' : '' }><AiOutlineHome/></a></li> 
+     <li className='links'><a href='#top' onClick={()=>setActive("#")} className={activeState==="#" ? 'active' : '' }><AiOutlineHome/></a></li> 
      <li className='links'> <a href='#about' onClick={()=>setActive("#about")} className={activeState==="#about" ? 'active' : '' }><AiOutlineUser/></a></li> 
      <li className='links'> <a href='#experience' onClick={()=>setActive("#experience")} className={activeState==="#experience" ? 'active' : '' }><BsBook/></a></li> 
      <li className='links'> <a href='#services' onClick={()=>setActive("#services")} className={activeState==="#services" ? 'active' : '' }><RiServiceLine/></a></li> 
