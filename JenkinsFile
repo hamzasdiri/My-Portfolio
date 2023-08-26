@@ -6,7 +6,7 @@ pipeline {
         nodejs 'node'
     }
     environment {
-        APP_NAME = "My-Portfolio"
+        APP_NAME = "my-portfolio"
         RELEASE = "1.0.0"
         DOCKER_USER = "13646891"
         DOCKER_PASS = "dockerhub"
