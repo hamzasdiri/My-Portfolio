@@ -33,7 +33,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install --force' // Install project dependencies
+                bat 'npm install' // Install project dependencies
             }
         }
         
