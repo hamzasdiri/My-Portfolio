@@ -29,4 +29,4 @@ COPY --from=build /app/build ./build
 EXPOSE 80
 
 # Start the React app
-CMD ["npx", "serve", "-s", "build", "-l", "80"]
+CMD ["npm", "start"]
