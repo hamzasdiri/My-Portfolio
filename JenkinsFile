@@ -84,10 +84,10 @@ pipeline {
         stage('Deploy to Vercel') {
             steps {
                 withCredentials([string(credentialsId: 'vercel-token', variable: 'VERCEL_TOKEN')]) {
-                 script {
-                 def vercelCmd = "vercel --prod --token \$VERCEL_TOKEN"
-                 bat(vercelCmd)
-                 }
+                    script {
+                     def vercelCmd = "vercel --prod --token %VERCEL_TOKEN%"
+                     bat(vercelCmd)
+                    }
                 }
             }
         }
