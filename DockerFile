@@ -1,23 +1,15 @@
+FROM node:19.6.0 AS build
 
-FROM node:19.6.0
-
-
+# Rest of the Dockerfile remains the same
 WORKDIR /app
-
-
 COPY package*.json ./
-
-
 RUN npm install
-
-
 COPY . .
-
-
 RUN npm run build
 
-
-EXPOSE 3000
+FROM node:19.6.0-slim
+WORKDIR /app
+COPY --from=build /app/build ./build
 
 
 CMD ["npm", "start"]
