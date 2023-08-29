@@ -86,9 +86,10 @@ pipeline {
                 withCredentials([
                     string(credentialsId: 'firebase-credentials', variable: 'FIREBASE_CREDENTIALS')
                 ]) {
-                    sh "echo '$FIREBASE_CREDENTIALS' > $HOME/firebase-credentials.json"
-                    sh "firebase use --add my-protfolio-99553 --token \"$FIREBASE_CREDENTIALS\""
-                    sh "firebase deploy --only hosting --token \"$FIREBASE_CREDENTIALS\""
+                    sh "echo '$FIREBASE_CREDENTIALS' > ${HOME}/firebase-credentials.json"
+                    sh "firebase use --add my-protfolio-99553 --token \"${FIREBASE_CREDENTIALS}\""
+                    sh "firebase deploy --only hosting --token \"${FIREBASE_CREDENTIALS}\""
+
                 }
             }
         }
