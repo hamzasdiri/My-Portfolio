@@ -25,7 +25,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM',
-                    branches: [[name: '*/master']], // Replace 'master' with your desired branch
+                    branches: [[name: '*/master']],
                     userRemoteConfigs: [[url: 'https://github.com/hamzasdiri/My-Portfolio']]
                 ])
             }
@@ -33,19 +33,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install' // Install project dependencies
+                bat 'npm install'
             }
         }
         
         stage('Build') {
             steps {
-                bat 'npm run build' // Build your React app
+                bat 'npm run build'
             }
         }
         
         stage('Test') {
             steps {
-                echo "Executing tests" // Run your tests
+                bat 'npm run test'
             }
         }
 
@@ -53,7 +53,7 @@ pipeline {
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
-                        bat "sonar-scanner" // Run SonarQube scanner for JavaScript/TypeScript projects
+                        bat "sonar-scanner" 
                     }
                 }
             }
@@ -94,7 +94,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                echo "I will deploy it" // Deploy your app to the desired environment
+                echo "I will deploy it"
             }
         }
     }
