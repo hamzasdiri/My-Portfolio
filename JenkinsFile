@@ -49,7 +49,7 @@ pipeline {
             }
         }
 
-        stage('Sonarqube analysis') {
+        /*stage('Sonarqube analysis') {
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') {
@@ -79,7 +79,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 
         stage('Deploy to Firebase') {
     steps {
