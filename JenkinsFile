@@ -84,14 +84,17 @@ pipeline {
         stage('Deploy to Firebase') {
     steps {
         script {
-            def firebaseToken = credentials('firebase-credentials')
-            echo "Firebase Token: ${firebaseToken}"
+            def firebaseTokenPath = "C:/ProgramData/Jenkins/.jenkins/workspace/my-portfolio/my-portfolio.json"
+            
+            // Copy the Firebase credentials JSON file to workspace
+            bat "copy \"${firebaseTokenPath}\" \"firebase-credentials.json\""
             
             bat 'npm install -g firebase-tools'
-            bat "firebase deploy --token \"${firebaseToken}\""
+            bat 'firebase deploy --token "$(cat firebase-credentials.json)"'
         }
     }
 }
+
 
 
 
