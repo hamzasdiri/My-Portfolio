@@ -87,7 +87,12 @@ pipeline {
             // Copy the Firebase credentials JSON file to where it's needed
             bat 'copy "my-portfolio.json" "firebase-credentials.json"'
             bat 'npm install -g firebase-tools'
-            bat 'firebase deploy --project my-protfolio-99553 --token "$(cat firebase-credentials.json)"'
+            
+            // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
+            env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
+            
+            // Deploy to Firebase
+            bat 'firebase deploy --project my-protfolio-99553'
         }
     }
 }
