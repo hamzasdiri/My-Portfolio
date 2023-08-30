@@ -82,15 +82,17 @@ pipeline {
         }
 
         stage('Deploy to Firebase') {
-            steps {
-                script {
-                    def firebaseToken = credentials('firebase-credentials')
-                    
-                    bat 'npm install -g firebase-tools'
-                    bat "firebase deploy --token ${firebaseToken}"
-                }
-            }
+    steps {
+        script {
+            def firebaseToken = credentials('firebase-credentials')
+            echo "Firebase Token: ${firebaseToken}"
+            
+            bat 'npm install -g firebase-tools'
+            bat "firebase deploy --token \"${firebaseToken}\""
         }
+    }
+}
+
 
 
         stage('Deploy') {
