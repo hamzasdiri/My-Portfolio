@@ -9,24 +9,32 @@ const Services = () => {
        <div className='container services_container center'>
        <article className='service'>
        <div className='service_head'>
-        <h3>WEB DEVELOPMENT & DESIGN</h3>
+        <h3>SOFTWARE DEVELOPMENT</h3>
        </div>
        <ul className='service_list'>
         <li>
           <BiCheck className='service_list-icon' />
-          <p>WEB PROJECT MANAGEMENT (Showcase site, e-commerce ...)</p>
+          <p>Crafting engaging and intuitive user interfaces using HTML, CSS, and JavaScript</p>
         </li>
         <li>
           <BiCheck className='service_list-icon' />
-          <p>PAGE DYNAMISM BY JAVASCRIPT</p>
+          <p>Building robust server-side logic with technologies like Node.js and Express.js</p>
         </li>
         <li>
           <BiCheck className='service_list-icon' />
-          <p>MULTI-PLATFORM DESIGN (Compatible with all media, tablet and mobile application)</p>
+          <p>Implementing efficient databases (SQL or NoSQL) to store and manage your data</p>
         </li>
         <li>
           <BiCheck className='service_list-icon' />
-          <p>GRAPHIC DESIGN & WEBDESIGN (Logos, business cards ...)</p>
+          <p>Creating RESTful or GraphQL APIs for seamless communication between frontend and backend</p>
+        </li>
+        <li>
+          <BiCheck className='service_list-icon' />
+          <p>Using frameworks like Flutter to create apps that work on both iOS and Android</p>
+        </li>
+        <li>
+          <BiCheck className='service_list-icon' />
+          <p>Connecting your app to a backend server for real-time data and functionality</p>
         </li>
        </ul>
        </article>
