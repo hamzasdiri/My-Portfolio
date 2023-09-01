@@ -1,7 +1,5 @@
 # My Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Introduction
 
 Welcome to my portfolio website! This website serves as a hub to showcase my projects, experience, and skills. It's also a demonstration of my technical capabilities, as I've implemented a robust CI/CD pipeline using various tools like Jenkins, SonarQube, Docker, and Firebase.
