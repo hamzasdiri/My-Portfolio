@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# My Portfolio Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+Welcome to my portfolio website! This website serves as a hub to showcase my projects, experience, and skills. It's also a demonstration of my technical capabilities, as I've implemented a robust CI/CD pipeline using various tools like Jenkins, SonarQube, Docker, and Firebase.
 
-### `npm start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+· `Projects` : Explore my showcased projects, along with detailed descriptions, images, and links to their respective repositories or live demos.\
+· `Experience` : Learn about my professional background, including my work history, education, and certifications.\
+· `Contact` : Get in touch with me through the provided contact information.\
+· `Blog` : Discover my latest insights and thoughts through my blog section.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### CI/CD Pipeline
+#### Technologies Used
+· `Jenkins` : I've set up a Jenkins CI/CD pipeline to automate the build, test, and deployment process of this website.\
+· `SonarQube` : SonarQube is used for code quality analysis and issue detection, ensuring the codebase is of high quality.\
+· `Quality Gate` : A quality gate ensures that only code meeting predefined quality criteria can proceed through the pipeline.\
+· `Docker` : I've created a Dockerfile to build a Docker image of the website for easy deployment.\
+· `Firebase` : The website is deployed using Firebase, making it accessible to users worldwide.
 
-### `npm test`
+#### CI/CD Workflow
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1) Build : Jenkins automatically builds the website whenever changes are pushed to the repository.
+2) Test : Automated tests are run to validate the website's functionality.
+3) SonarQube Analysis : The code undergoes analysis with SonarQube to identify and report any code quality issues.
+4) Quality Gate : The pipeline enforces a quality gate, ensuring that only high-quality code proceeds to the next stage.
+5) Docker Image : A Docker image is created from the codebase for portability and consistency.
+6) Deployment : The website is automatically deployed to Firebase, making it accessible online.
 
-### `npm run build`
+### Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feel free to explore the website and check out my projects and experience. You can access the website [here](https://my-protfolio-99553.web.app/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How to Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you'd like to run this website locally for development or testing purposes, follow these steps:
 
-### `npm run eject`
+1) Clone the repository : git clone [https://github.com/your-username/your-portfolio.git](https://github.com/hamzasdiri/My-Portfolio)
+2) Install dependencies : npm install (or the appropriate package manager)
+3) Start the development server : npm start
+4) Access the website in your browser at http://localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Contact
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you have any questions, feedback, or inquiries, please don't hesitate to reach out to me:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Email : sdiri.hamza@outlook.com
+#### LinkedIn : https://www.linkedin.com/in/hamza-sdiri/
