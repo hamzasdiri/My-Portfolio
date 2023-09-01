@@ -40,6 +40,93 @@
   color: rgb(244, 146, 71);
 }
 
+.active {
+  color: rgb(244, 146, 71);
+}
+
+.arrow {
+  margin-right: 30px;
+}
+.experience-header {
+  display: inline-flex;
+}
+.jobs {
+  display: inline-flex;
+  gap: 2rem;
+}
+.jobs li {
+  cursor: pointer;
+  list-style: square;
+}
+
+.active-job {
+  color: rgb(214, 99, 12);
+}
+
+.experience_box {
+  background: var(--color-primary-variant);
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid var(--color-primary);
+  height: fit-content;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.experience_head {
+  background: var(--color-bg-variant);
+  padding: 1rem;
+  border-radius: 0 0 0rem 0rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0);
+}
+
+#experiences h2 {
+  color: var(--color-primary-variant);
+}
+
+.experience_head h3 {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.date {
+  text-align: end;
+  font-size: 13px;
+  margin-right: 10px;
+}
+.experience_list {
+  padding: 2rem;
+}
+
+.experience_list li {
+  display: flex;
+}
+
+.experience_list-icon {
+  color: var(--color-bg-variant);
+  margin-top: 2px;
+  margin-right: 2px;
+}
+
+.experience_list p {
+  font-size: 0.9rem;
+}
+
+/* media queries(medium devices) */
+@media (max-width: 1024px) {
+  .experience {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* media queries(small devices) */
+@media (max-width: 600px) {
+  .experience {
+    width: 100%;
+  }
+}
+
 .about_cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -76,7 +163,7 @@
   color: var(--color-light);
 }
 
-.about_content p {
+.content-p {
   margin: 2rem 0 2.6rem;
   color: var(--color-light);
 }
