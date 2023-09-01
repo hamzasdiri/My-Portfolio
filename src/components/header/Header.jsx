@@ -11,7 +11,7 @@ const Header = () => {
       <header>
         <div className="container header_container">
           <h5>Hello It's me</h5>
-          <h1>Hamza Sdir</h1>
+          <h1>Hamza</h1>
           <h5 className="text-light" style={{ display: "inline-flex" }}>
             I'm a
             <span
