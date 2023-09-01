@@ -8,7 +8,7 @@ const Experience = () => {
       <h2>Technical Skills</h2>
       <div className="container experience_container">
       <div className="experience_back ">
-          <h3>Programmation Languages</h3>
+          <h3>Programming Languages</h3>
           <div className="experience_content">
             <article className="experience_details">
               <BsPatchCheckFill className="experience_details-icon" />
