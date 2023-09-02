@@ -58,7 +58,7 @@ const Portfolio = () => {
               </div>
               <h3>{title}</h3>
               <div className="portfolio_item-cta">
-                {github != "" && (
+                {github !== "" && (
                   <a
                     href={github}
                     className="btn"
@@ -68,7 +68,7 @@ const Portfolio = () => {
                     Github
                   </a>
                 )}
-                {demo != "" && (
+                {demo !== "" && (
                   <a
                     href={demo}
                     className="btn btn-primary"
