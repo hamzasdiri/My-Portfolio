@@ -84,19 +84,27 @@ pipeline {
         stage('Deploy to Firebase') {
     steps {
         script {
-            withCredentials([file(credentialsId: 'firebase-credentials', variable: 'FIREBASE_CREDENTIALS_JSON')]) {
+            withCredentials([file(credentialsId: 'firebase-credentials', variable: 'FIREBASE_CREDENTIALS_JSON'),
+                            string(credentialsId: 'firebase-token', variable: 'FIREBASE_TOKEN')]) {
                 // Write the credentials to a file
                 writeFile file: 'firebase-credentials.json', text: FIREBASE_CREDENTIALS_JSON
 
-                // Install Firebase CLI and deploy
+                // Install Firebase CLI
                 bat 'npm install -g firebase-tools'
+
+                // Authenticate with Firebase using the token
+                bat 'firebase login --no-localhost --token "$FIREBASE_TOKEN"'
+
                 // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
                 env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
+
+                // Deploy to Firebase
                 bat 'firebase deploy --project my-protfolio-99553'
             }
         }
     }
 }
+
 
 
 
