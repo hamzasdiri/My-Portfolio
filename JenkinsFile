@@ -85,7 +85,7 @@ pipeline {
             steps {
                 script {
                     // Copy the Firebase credentials JSON file to where it's needed
-                    bat 'copy "${workspace}\\my-portfolio.json" "firebase-credentials.json"'
+                    bat 'copy "C:/ProgramData/Jenkins/.jenkins/workspace/my-portfolio.json" "firebase-credentials.json"'
                     bat 'npm install -g firebase-tools'
             
                     // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
