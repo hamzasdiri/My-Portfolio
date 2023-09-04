@@ -82,22 +82,21 @@ pipeline {
         }
 
         stage('Deploy to Firebase') {
-            steps {
-                script {
+    steps {
+        withCredentials([file(credentialsId: 'firebase-credentials', variable: 'FIREBASE_CREDENTIALS_JSON')]) {
+            // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
+            env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
 
-                    def credentials = credentials('firebase-credentials')
-                    // Copy the Firebase credentials JSON file to where it's needed
-                    bat "copy \"${credentials}\" \"firebase-credentials.json\""
-                    bat 'npm install -g firebase-tools'
-            
-                    // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
-                    env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
-            
-                    // Deploy to Firebase
-                    bat 'firebase deploy --project my-protfolio-99553'
-                }
-            }
+            // Write the credentials to a file
+            writeFile file: 'firebase-credentials.json', text: FIREBASE_CREDENTIALS_JSON
+
+            // Install Firebase CLI and deploy
+            bat 'npm install -g firebase-tools'
+            bat 'firebase deploy --project my-protfolio-99553'
         }
+    }
+}
+
 
     }
 }
