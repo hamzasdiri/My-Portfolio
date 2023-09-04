@@ -84,8 +84,10 @@ pipeline {
         stage('Deploy to Firebase') {
             steps {
                 script {
+
+                    def credentials = credentials('firebase-credentials')
                     // Copy the Firebase credentials JSON file to where it's needed
-                    bat 'copy "C:/ProgramData/Jenkins/.jenkins/workspace/my-portfolio.json" "firebase-credentials.json"'
+                    bat "copy \"${credentials}\" \"firebase-credentials.json\""
                     bat 'npm install -g firebase-tools'
             
                     // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
