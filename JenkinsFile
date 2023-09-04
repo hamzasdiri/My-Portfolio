@@ -92,18 +92,16 @@ pipeline {
                 // Install Firebase CLI
                 bat 'npm install -g firebase-tools'
 
-                // Authenticate with Firebase using the token
-                bat 'firebase login --no-localhost --token "$FIREBASE_TOKEN"'
-
                 // Set the GOOGLE_APPLICATION_CREDENTIALS environment variable
                 env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
 
-                // Deploy to Firebase
-                bat 'firebase deploy --project my-protfolio-99553'
+                // Deploy to Firebase using the authentication token
+                bat 'firebase deploy --project my-protfolio-99553 --token "$FIREBASE_TOKEN"'
             }
         }
     }
 }
+
 
 
 
