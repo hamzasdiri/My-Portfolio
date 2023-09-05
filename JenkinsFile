@@ -43,7 +43,7 @@ pipeline {
             }
         }
         
-        stage('Test') {
+        /*stage('Test') {
             steps {
                 echo "No tests yet"
             }
@@ -79,7 +79,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 
         stage('Deploy to Firebase') {
     steps {
