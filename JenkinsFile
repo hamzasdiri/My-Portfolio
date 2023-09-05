@@ -96,7 +96,7 @@ pipeline {
                 env.GOOGLE_APPLICATION_CREDENTIALS = 'firebase-credentials.json'
 
                 // Deploy to Firebase using the authentication token
-                bat 'firebase deploy --project my-protfolio-99553 --token "$FIREBASE_TOKEN"'
+                bat 'firebase deploy --project my-protfolio-99553 "'
             }
         }
     }
