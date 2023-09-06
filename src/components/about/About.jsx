@@ -3,8 +3,8 @@ import "./about.css";
 import ME from "../../assets/sanfour3.jpg";
 import { BsCalendarDate, BsArrowReturnRight } from "react-icons/bs";
 import { BiCheck } from "react-icons/bi";
-import { FaUniversity } from "react-icons/fa";
-import { FaLanguage } from "react-icons/fa";
+import { FaUniversity , FaLanguage } from "react-icons/fa";
+
 const About = () => {
   const [section, setSection] = useState("experience");
   const [job, setJob] = useState("UNTY");
@@ -106,27 +106,27 @@ const About = () => {
                   </div>
                   <ul className="experience_list">
                     {job === "UNTY"
-                      ? unty_tasks.map((item) => {
+                      ? unty_tasks.map((item,key) => {
                           return (
                             <li>
-                              <BiCheck className="experience_list-icon" />
+                              <BiCheck className="experience_list-icon" key={key}/>
                               <p className="task">{item}</p>
                             </li>
                           );
                         })
                       : job === "WaterSec"
-                      ? watersec_tasks1.map((item) => {
+                      ? watersec_tasks1.map((item,key) => {
                           return (
                             <li>
-                              <BiCheck className="experience_list-icon" />
+                              <BiCheck className="experience_list-icon" key={key}/>
                               <p className="task">{item}</p>
                             </li>
                           );
                         })
-                      : enactus_tasks.map((item) => {
+                      : enactus_tasks.map((item,key) => {
                           return (
                             <li>
-                              <BiCheck className="experience_list-icon" />
+                              <BiCheck className="experience_list-icon" key={key}/>
                               <p className="task">{item}</p>
                             </li>
                           );
@@ -139,10 +139,10 @@ const About = () => {
                       </div>
                       <div className="date">June 2022 - August 2022</div>
                       <ul className="experience_list">
-                        {watersec_tasks2.map((item) => {
+                        {watersec_tasks2.map((item,key) => {
                           return (
                             <li>
-                              <BiCheck className="experience_list-icon" />
+                              <BiCheck className="experience_list-icon" key={key}/>
                               <p className="task">{item}</p>
                             </li>
                           );
