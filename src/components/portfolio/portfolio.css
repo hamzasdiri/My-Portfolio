@@ -41,7 +41,6 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
-  /*margin-left: 28%;*/
 }
 
 .portfolio_item-cta .btn {
@@ -66,7 +65,6 @@
   cursor: not-allowed;
 }
 
-/* media queries(medium devices) */
 @media (max-width: 1024px) {
   .portfolio_container {
     grid-template-columns: 1fr 1fr;
@@ -74,10 +72,38 @@
   }
 }
 
-/* media queries(small devices) */
 @media (max-width: 600px) {
   .portfolio_container {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}
+.custom-carousel-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+
+.prev-button {
+  left: 10px;
+  color: black; 
+  font-size: 40px; 
+}
+
+.next-button {
+  right: 10px;
+  color: black; 
+  font-size: 40px; 
+}
+
+.carousel .control-dots .dot {
+  background: var(--color-primary) !important;
+}
+
+.carousel .control-dots .dot .selected {
+  background: var(--color-bg-variant) !important;
 }
