@@ -5,6 +5,9 @@
 }
 
 .portfolio_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: rgb(214, 99, 12);
   padding: 1.3rem;
   border-radius: 2rem;
@@ -27,11 +30,10 @@
 .portfolio_item-image {
   border-radius: 1.5rem;
   overflow: hidden;
-  height: 250px;
+  height: 300px;
 }
 
 .portfolio_item h3 {
-  margin: 1.2rem 0 2rem;
   text-align: center;
 }
 
@@ -49,7 +51,6 @@
   background: white;
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
-  cursor: pointer;
   border: 1px solid rgb(244, 146, 71);
   transition: var(--transition);
 }
@@ -58,6 +59,11 @@
   background: rgb(244, 146, 71);
   color: white;
   border-color: transparent;
+}
+
+.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 /* media queries(medium devices) */
