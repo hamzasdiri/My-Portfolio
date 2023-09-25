@@ -7,7 +7,7 @@ const Experience = () => {
       <h5>What Skills I Have</h5>
       <h2>Technical Skills</h2>
       <div className="container experience_container">
-      <div className="experience_back ">
+        <div className="experience_back ">
           <h3>Programming Languages</h3>
           <div className="experience_content">
             <article className="experience_details">
@@ -36,7 +36,7 @@ const Experience = () => {
             </article>
           </div>
         </div>
-        <div className="experience_front ">
+        <div className="experience_back ">
           <h3>FrontEnd Developement</h3>
           <div className="experience_content">
             <article className="experience_details">

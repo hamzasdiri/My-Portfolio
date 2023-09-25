@@ -6,9 +6,7 @@ import img2 from "../../assets/watersec.png";
 import img3 from "../../assets/philia2.png";
 import img4 from "../../assets/watersecapp.png";
 import philia from "../../assets/philia/philia.mp4";
-
-import Modal from "react-responsive-modal";
-import "react-responsive-modal/styles.css";
+import Modal from "../modal/modal";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
@@ -18,7 +16,7 @@ import {
 
 function importAll(r) {
   let images = {};
-  r.keys().map((item) => {
+  r.keys().forEach((item) => {
     images[item.replace("./", "")] = r(item);
   });
   return images;
@@ -92,13 +90,13 @@ const Portfolio = () => {
     }
   };
 
-  const [open, setOpen] = useState(false);
-
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <section id="portfolio">
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
-
       <div className="container portfolio_container">
         {data.map(({ id, image, title, github, demo, media }) => {
           return (
@@ -133,19 +131,14 @@ const Portfolio = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                Live Demo
+                  Live Demo
                 </a>
               </div>
             </article>
           );
         })}
       </div>
-      <Modal
-        open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        center={false}
-        styles={{ modal: { height: "95%", padding: "0px" } }}
-      >
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
         <h2>{currentProjectTitle}</h2>
         <Carousel
           showStatus={false}
@@ -191,7 +184,7 @@ const Portfolio = () => {
                 height: "90vh",
               }}
             >
-              {image.toLowerCase().slice(-4) == ".mp4" ? (
+              {image.toLowerCase().slice(-4) === ".mp4" ? (
                 <video
                   controls
                   autoPlay
@@ -206,7 +199,7 @@ const Portfolio = () => {
               ) : (
                 <img
                   src={image}
-                  alt={`Project Image ${index}`}
+                  alt={`Project ${index}`}
                   style={{
                     maxWidth: "100%",
                     maxHeight: "100%",
