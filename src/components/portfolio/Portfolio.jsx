@@ -5,6 +5,7 @@ import img1 from "../../assets/baskety.png";
 import img2 from "../../assets/watersec.png";
 import img3 from "../../assets/philia2.png";
 import img4 from "../../assets/watersecapp.png";
+import img5 from "../../assets/scrapemaster.png";
 import philia from "../../assets/philia/philia.mp4";
 import Modal from "../modal/modal";
 import { Carousel } from "react-responsive-carousel";
@@ -31,6 +32,14 @@ const philia_images = importAll(
 philia_images["philia.mp4"] = philia;
 
 const data = [
+  {
+    id: 6,
+    image: img5,
+    title: "Scrape Master",
+    github: "https://github.com/hamzasdiri/Scrape_Master",
+    demo: "https://scrapemaster-black.vercel.app/",
+    media: [],
+  },
   {
     id: 1,
     image: img0,
@@ -60,8 +69,7 @@ const data = [
     image: img3,
     title: "LOGO (Mobile App)",
     github: "",
-    demo:
-      "https://www.linkedin.com/posts/hamza-sdiri_dear-network-im-so-glad-to-share-with-activity-6943542265403334656-pU6c?utm_source=share&utm_medium=member_desktop",
+    demo: "https://www.linkedin.com/posts/hamza-sdiri_dear-network-im-so-glad-to-share-with-activity-6943542265403334656-pU6c?utm_source=share&utm_medium=member_desktop",
     media: philia_images,
   },
   {
